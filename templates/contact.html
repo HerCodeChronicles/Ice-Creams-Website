@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f6d9c9, #f6d9c9);
+        }
+
+        .hero-img {
+            width: 90%;
+            height: 600px;
+            object-fit: cover;
+            display: block;
+            margin: 40px auto 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            max-width: 520px;
+            margin: 60px auto;
+            padding: 35px;
+            background-color: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 26px;
+            color: #2c3e50;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            margin-top: 14px;
+            color: #34495e;
+            font-size: 15px;
+        }
+
+        input, textarea {
+            padding: 10px 12px;
+            margin-top: 6px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #007BFF;
+            box-shadow: 0 0 4px rgba(0,123,255,0.3);
+        }
+
+        button {
+            margin-top: 24px;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border: 1px solid #c3e6cb;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 576px) {
+            .hero-img {
+                height: 300px;
+            }
+
+            .form-container {
+                padding: 25px 20px;
+                margin: 30px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <img src="https://plus.unsplash.com/premium_photo-1687533705373-0830e84d757d?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Telephone" class="hero-img">
+    </div>
+
+    <div class="form-container">
+        <h2>Contact Form</h2>
+
+        {% if success %}
+            <p class="success">✅ Thank you! Your message has been submitted successfully.</p>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" id="phone" required>
+
+            <label for="desc">Description:</label>
+            <textarea name="desc" id="desc" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

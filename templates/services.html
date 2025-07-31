@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}Services{% endblock title %}
+
+{% block body %}
+<style>
+  body {
+    background: linear-gradient( #f6d9c9, #f6d9c9);
+  }
+
+  .card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    color: #c36d97ff;
+    font-weight: 600;
+  }
+
+  .card-text {
+    color: #444;
+  }
+
+  h2 {
+    font-weight: bold;
+    color: rgba(12, 3, 10, 1);
+  }
+</style>
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Our Ice Cream Collection</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+    <!-- 1. Vanilla -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Vanilla" height="300">
+        <div class="card-body">
+          <h5 class="card-title">Classic Vanilla Delight</h5>
+          <p class="card-text">Made with real vanilla beans and creamy milk – a timeless classic!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Chocolate -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1724805053809-3c09736b2ade?q=80&w=687&auto=format&fit=crop" class="card-img-top" alt="Chocolate" height="300">
+        <div class="card-body">
+          <h5 class="card-title">Choco Fudge Fantasy</h5>
+          <p class="card-text">Rich dark chocolate with gooey fudge chunks in every bite.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Strawberry -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1633933358116-a27b902fad35?q=80&w=764&auto=format&fit=crop" class="card-img-top" alt="Strawberry" height="300">
+        <div class="card-body">
+          <h5 class="card-title">Strawberry Swirl</h5>
+          <p class="card-text">Swirled with ripe strawberries and fresh cream for a fruity burst.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Mango -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1724805053205-d429850a5ed5?q=80&w=687&auto=format&fit=crop" class="card-img-top" alt="Mango" height="300">
+        <div class="card-body">
+          <h5 class="card-title">Mango Mania</h5>
+          <p class="card-text">Alphonso mango flavor packed in a tropical creamy delight.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Butterscotch -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1650419741906-1cdead9c9b4f?q=80&w=688&auto=format&fit=crop" class="card-img-top" alt="Butterscotch" height="300">
+        <div class="card-body">
+          <h5 class="card-title">Butterscotch Bliss</h5>
+          <p class="card-text">Crunchy caramel toffee bits mixed in golden butterscotch cream.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Black Currant -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1518091653999-278f46860620?q=80&w=687&auto=format&fit=crop" class="card-img-top" alt="Black Currant" height="300">
+        <div class="card-body">
+          <h5 class="card-title">Black Currant Crush</h5>
+          <p class="card-text">Tangy black currants with a hint of berry creaminess.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Fruit & Nut -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Fruit & Nut" height="300">
+        <div class="card-body">
+          <h5 class="card-title">Fruit & Nut Delight</h5>
+          <p class="card-text">Almonds, raisins, cashews – royalty in every scoop.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Pista -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1556682851-c4580670113a?q=80&w=771&auto=format&fit=crop" class="card-img-top" alt="Pista" height="300">
+        <div class="card-body">
+          <h5 class="card-title">Pista Punch</h5>
+          <p class="card-text">Premium pistachios blended into rich green creaminess.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Cookies & Cream -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1634585648796-fd967882735d?q=80&w=1900&auto=format&fit=crop" class="card-img-top" alt="Cookies & Cream" height="300">
+        <div class="card-body">
+          <h5 class="card-title">Cookies & Cream</h5>
+          <p class="card-text">Crushed chocolate cookies in vanilla cream. The perfect crunch!</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock body %}
